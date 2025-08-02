@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Beatsy</title>
+  </head>
+  <body>
+    <h1>Beatsy</h1>
+
+    <div class="drum-kit">
+      <button class="drum" id="w">w</button>
+      <button class="drum" id="a">a</button>
+      <button class="drum" id="s">s</button>
+      <button class="drum" id="d">d</button>
+      <button class="drum" id="space">space</button>
+    </div>
+
+    <audio id="w-audio" src="sounds/w.wav" preload="auto"></audio>
+    <audio id="a-audio" src="sounds/a.wav" preload="auto"></audio>
+    <audio id="s-audio" src="sounds/s.wav" preload="auto"></audio>
+    <audio id="d-audio" src="sounds/d.wav" preload="auto"></audio>
+    <audio id="space-audio" src="sounds/space.mp3" preload="auto"></audio>
+
+    <div class="instructions">
+      <h3>How to Play:</h3>
+      <p>• Click the drum buttons or press keys: W, A, S, D, SPACE</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
