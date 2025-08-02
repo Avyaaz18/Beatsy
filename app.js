@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     a: document.getElementById("a-audio"),
     s: document.getElementById("s-audio"),
     d: document.getElementById("d-audio"),
-    " ": document.getElementById("space-audio"), 
+    " ": document.getElementById("space-audio"),
   };
 
   function playDrum(key) {
@@ -33,25 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const key = event.key.toLowerCase();
 
     if (audioElements[key]) {
-      event.preventDefault(); 
+      event.preventDefault();
       playDrum(key);
     }
   });
 
   drums.forEach((drum) => {
     drum.addEventListener("touchstart", function (e) {
-      e.preventDefault(); 
+      e.preventDefault();
       const key = this.id === "space" ? " " : this.id;
       playDrum(key);
     });
-  });
-
-  document.addEventListener("keydown", function (event) {
-    const key = event.key.toLowerCase();
-    const button = document.getElementById(key === " " ? "space" : key);
-
-    if (button && audioElements[key]) {
-      button.classList.add("active");
-    }
   });
 });
